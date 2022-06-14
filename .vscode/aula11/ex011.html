@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País em que vive!</title>
+</head>
+<body>
+    
+    <h1>Em qual país você vive?</h1>
+    País em que vive: <input type="text" name="nacionalidade" id="nacionalidade"/>
+    <input type="button" value="Verificar" onclick='calcular()'/>
+    <div id='res'></div>
+
+    <script>
+        function calcular() { 
+        var pais = window.document.querySelector('input#nacionalidade')
+        var res = window.document.querySelector('div#res')
+        var vel = String(pais.value)
+        
+        if (vel == 'Brasil') {
+            res.innerHTML = `<p> Quem vive em ${vel} é <strong>Brasileiro!</strong></p>`
+        } else {
+            res.innerHTML = `<p> Quem vive em ${vel} é <strong>Estrangeiro!</strong></p>`  
+        }              
+    }
+    </script>
+
+</body>
+</html>
+
